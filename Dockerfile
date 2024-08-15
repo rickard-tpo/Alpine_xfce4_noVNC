@@ -66,6 +66,7 @@ RUN mkdir -p /home/alpine/.vnc \
     && echo -e "-Securitytypes=VncAuth" > /home/alpine/.vnc/config \
     && echo -e "#!/bin/bash\nstartxfce4 &" > /home/alpine/.vnc/xstartup \
     && echo -e "alpine\nalpine\nn\n" | vncpasswd
+    # Replace alpine above to change the noVNC password. Leave the \n and \nn as they are.
 
 USER alpine
 
