@@ -21,14 +21,19 @@ RUN apk add \
         faenza-icon-theme \
         firefox \
         git \
+        iperf3 \
+        nano \
         nodejs \
         npm \
         pavucontrol \
         pulseaudio \
         pulseaudio-alsa \
         python3 \
+        speedtest-cli \
         sudo \
+        tcpdump \
         tigervnc \
+        traceroute \
         tzdata \
         wget \
         xfce4 \
