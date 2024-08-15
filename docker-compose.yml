@@ -11,6 +11,7 @@ services:
         BUILD_DATE: "${BUILD_DATE:-01.01.1970}"
     ports:
       - '${PUBLIC_HTTP_PORT:-6080:6080}'
+      - 5201:5201
     restart: always
     environment:
       - TZ=${TZ:-Etc/UTC}
