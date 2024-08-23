@@ -1,3 +1,9 @@
+Based on the work of https://github.com/novaspirit/ and https://github.com/nett00n
+
+Changes include adding a few network troubleshooting tools as well as simple authentication for VNC. 
+
+
+
 # Alpine xfce4 noVNC
 
 Simple and minimal Alpine Docker Image providing XFCE4 through html5 noVNC connection
