@@ -2,6 +2,33 @@ Based on the work of https://github.com/novaspirit/ and https://github.com/nett0
 
 Changes include adding a few network troubleshooting tools as well as simple authentication for VNC. 
 
+To set the password for VNC, change *alpine* twice in the Dockerfile on row 68
+
+For example, to change password to *NewPassword*, it would be:
+```shell
+    && echo -e "alpine\nalpine\nn\n" | vncpasswd
+```
+
+```shell
+    && echo -e "NewPassword\nNewPassword\nn\n" | vncpasswd
+```
+
+To add other packages to the container, add them under row 15 in the Dockerfile
+```shell
+RUN apk add \
+        new-package \
+```
+
+To download and run as is (password *alpine*):
+
+```shell
+git clone https://github.com/rickard-tpo/Alpine_xfce4_noVNC.git
+docker build -t alpine-xfce4 Alpine_xfce4_noVNC/
+```
+
+```shell
+docker run -it -p 6080:6080 -p 56780:56780 -p 5201:5201 --name alpine-novnc alpine-xfce4
+```
 
 
 # Alpine xfce4 noVNC
